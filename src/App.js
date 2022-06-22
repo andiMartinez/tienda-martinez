@@ -1,11 +1,15 @@
-import './App.css';
+import React from 'react'
+import './index.css';
+import NavBar from '../src/Components/NavBar';
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hola Mundo</h1>
-    </div>
+    <>
+      <NavBar />
+    </>
   );
 }
-
 export default App;
+
+
+
