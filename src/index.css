@@ -2,9 +2,67 @@
 @tailwind components;
 @tailwind utilities;
 
+*{
+   background-color: black;
+}
 
-
-
+  ul#challenge{
+    @apply  text-center text-yellow-500 ;
+    position: fixed;
+    height: 100%;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin-right: 1.6rem;
+     font-size: 0.8rem; 
+    -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+            writing-mode: vertical-rl;
+  }
   
+  li.nav  {
+    @apply bg-white ;
+  }
 
-  
+  ul#challenge > li {
+   /*  display: inline-block; */
+  }
+
+  a.nav:hover{
+    color: #f6e05e;
+  }
+
+  nav.nav{
+    @apply py-5 bg-black relative;
+  }
+
+  #navbar{
+    /* background-color: black; */
+  }
+
+  ul#navbar{
+    @apply flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-mono text-white;
+  }
+
+  div#navbar{
+    @apply container flex flex-wrap justify-between mx-auto align-middle;
+  }
+
+  a#navbar{
+    @apply flex items-center text-xl font-semibold text-white px-3;
+  }
+
+  a#logo{
+    @apply flex items-center text-xl font-semibold text-white px-3;
+  }
+
+ div.landing{
+  @apply text-white animate-pulse text-center ;
+ }
+
+ div.landing:hover{
+
+  /* @apply text-neutral-50 ; */
+   /* @apply hover:bg-yellow-500; */
+   /* @apply bg-black ; */
+} 
