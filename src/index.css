@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-*{
+/* *{
    background-color: black;
-}
+} */
 
   ul#challenge{
-    @apply  text-center text-yellow-500 ;
+    @apply  text-center text-black ;
     position: fixed;
     height: 100%;
     top: 0;
@@ -57,7 +57,7 @@
   }
 
  div.landing{
-  @apply text-white animate-pulse text-center ;
+  @apply text-black animate-pulse text-center flex ;
  }
 
  div.landing:hover{
@@ -66,3 +66,14 @@
    /* @apply hover:bg-yellow-500; */
    /* @apply bg-black ; */
 } 
+
+section.prd-crd{
+  @apply text-black;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 15%;
+}
