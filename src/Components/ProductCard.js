@@ -24,9 +24,7 @@ const ProductCard = ({stock,min, name}) => {
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full border-solid">
         -
         </button>
-        
         <span>CANTIDAD: {amount}</span> - STOCK: {stock}
-        
         <button 
         onClick={()=>count(+1)} 
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full border-solid">
