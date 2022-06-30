@@ -2,7 +2,7 @@ function Challenge() {
     return (
         <div>
             <ul id="challenge">
-                <li>Desafio Entregable 3: NavBar + CartWidget + Greeting</li>
+                <li>Desafio Catálogo con MAPS</li>
             </ul>
         </div>
     );

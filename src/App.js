@@ -8,14 +8,11 @@ import ProductCard from './Components/ProductCard';
 function App() {
   return (
     <>
-      
       <NavBar />
-      <ItemListContainer greeting="¡Bienvenidos a la Tienda!">
+      <ItemListContainer greeting="¡Bienvenidos a la Tienda!"/>
       
-      </ItemListContainer>
-      <ProductCard stock={10} min={0} name="DUMMY PRODUCT"/>
+      {/* <ProductCard stock={10} min={0} name="DUMMY PRODUCT"/> */}
       <Challenge />
-      
     </>
   );
 }
