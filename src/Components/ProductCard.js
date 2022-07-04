@@ -1,36 +1,33 @@
 import React, { useState } from 'react'
-import DUMMY_PRODUCT_IMAGE from '/home/andinov/Documentos/coderhouse/tiendamartinez/src/assets/DUMMY_PRODUCT_IMAGE.png';
+
+const ProductCard = ({ stock, min, max}) => {
 
 
-const ProductCard = ({stock,min,name}) => {
+  
+    const [ amount, setAmount ] = useState(0);
 
-
-    const [ amount,setAmount ] = useState(0);
     const count = (value) => {
         const result = amount + value;
         if (result<=stock && result>=min){
         setAmount(amount+value);
         } 
-       
     }
 
   return (
     <section className='prd-crd text-center'>
-        <h3>{name}</h3>
-        <img className="center" src={DUMMY_PRODUCT_IMAGE} alt="placeholder" width="350" height="350"/>
-        <h4> $ 500</h4>
         <div className="justify-items-center">
         <button 
-        onClick={()=>count(-1)} 
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full border-solid">
+        onClick={()=>count(-1) && console.log("aprete-1")} 
+        className="bg-yellow-500 hover:text-black text-white text-xs font-bold py-2 px-4 rounded-full border-solid space-x-10">
         -
         </button>
-        <span>CANTIDAD: {amount}</span> - STOCK: {stock}
+        <span className='text-xs'> CANTIDAD: {amount} - STOCK: {stock} </span>
         <button 
-        onClick={()=>count(+1)} 
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full border-solid">
+        onClick={()=>count(+1) && console.log("aprete-1") } 
+        className="bg-yellow-500 hover:text-black text-white text-xs  font-bold py-2 px-4 rounded-full border-solid">
         +
         </button>
+
         </div>
     </section>
     
