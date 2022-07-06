@@ -2,7 +2,7 @@ function Challenge() {
     return (
         <div>
             <ul id="challenge">
-                <li>Desafio Catálogo con MAPS</li>
+                <li>Challenge: Ver detalle de producto</li>
             </ul>
         </div>
     );

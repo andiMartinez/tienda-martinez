@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import { getData } from '../mocks/fakeapi'
-import { Link } from 'react-router-dom'
+import { getProducts } from '../mocks/fakeapi'
 import LoadingSpinner from '../extras/LoadingSpinner'
 
 const ItemListContainer = ({ greeting }) => {
@@ -12,7 +11,7 @@ const ItemListContainer = ({ greeting }) => {
     console.log(productList);
 
     useEffect(() => {
-        getData
+        getProducts
             .then((respuestaPromise) => setProductList(respuestaPromise))
             .catch((error) => console.log(error))
             .finally(() => setLoading(false))

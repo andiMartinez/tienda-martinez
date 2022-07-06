@@ -1,15 +1,15 @@
-/* This example requires Tailwind CSS v2.0+ */
 import { Fragment, useState } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XIcon } from '@heroicons/react/outline'
+import { Link } from 'react-router-dom'
 
 const products = [
   {
     id: 1,
-    name: 'Throwback Hip Bag',
+    name: 'Landing',
     href: '#',
     color: 'Salmon',
-    price: '$90.00',
+    price: '$2000.00',
     quantity: 1,
     imageSrc: 'https://tailwindui.com/img/ecommerce-images/shopping-cart-page-04-product-01.jpg',
     imageAlt: 'Salmon orange fabric pouch with match zipper, gray zipper pull, and adjustable hip belt.',
@@ -64,6 +64,7 @@ const CartItemDetail = ({product}) => {
                       <div className="flex items-start justify-between">
                         <Dialog.Title className="text-lg font-medium text-gray-900"> Shopping cart </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
+                        <Link to="/">
                           <button
                             type="button"
                             className="-m-2 p-2 text-gray-400 hover:text-gray-500"
@@ -72,6 +73,7 @@ const CartItemDetail = ({product}) => {
                             <span className="sr-only">Close panel</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
+                          </Link>
                         </div>
                       </div>
 

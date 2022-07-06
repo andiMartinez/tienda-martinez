@@ -1,21 +1,27 @@
-import React from 'react'
+import React, { useState } from 'react'
 import ItemDetail from './ItemDetail'
+import { getProduct } from '../mocks/fakeapi'
+import { useEffect } from 'react'
+import LoadingSpinner from '../extras/LoadingSpinner'
 
 const ItemDetailContainer = () => {
 
-    //const [product, setProduct] = useState([])
+  const [product, setProduct] = useState({})
+  const [loading, setLoading] = useState(true)
 
-/*     useEffect(() => {
-        getData
-            .then((respuestaPromise) => setProductList(respuestaPromise))
-            .catch((error) => console.log(error))
-            .finally(() => setLoading(false))
-    }, [])
- */
+  useEffect(() => {
+    getProduct
+      .then((RespuestaUnProducto) => setProduct(RespuestaUnProducto))
+      .catch((error) => console.log(error))
+      .finally(() => setLoading(false))
+  }, [])
 
   return (
-    <div><ItemDetail/></div>
-  )
+
+    <div>
+      {loading ? <p className='text-center m-52'><LoadingSpinner /></p> : <ItemDetail product={product} />}
+    </div>
+  );
 }
 
 export default ItemDetailContainer
