@@ -1,55 +1,17 @@
 
-# Welcome to andinov_ store.
-## This store is made with react CRA, NodeJS and TailwindCSS.
-
-
-## Avaiable Scrips
-### Getting Started with Create React App
-### 'git clone + https_path_to_proyect'
-In the proyect directory, you can run: 
-### 'npm install'
-### 'npm start'
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-### `npm run eject`
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+# ¡Welcome to andinov_ project!
 
 ## Arquitectura
 
-## react-router-dom
+The application has a dynamic NavBar component where the categories to be selected are mapped. The NavBar is outside the scope of Routes since it renders the same way on any screen. It also includes the container components that include the logic of the states and/or promises in order to display the list of products in the body of the home (ItemListConteiner-> ItemList -> Item) and also ItemDetailContainer -> ItemDetail.The cartWidget is a component that is displayed on the NavBar and maps the /Cart path.
 
-## Learn More
+## This store is made with react CRA, Node and TailwindCSS, with a mock api for products. 
 
+###App preview.
+<https://i.imgur.com/Ngrj1fn.mp4>
 
-### Code Splitting
-
-
-
-### Analyzing the Bundle Size
-
-
-### Making a Progressive Web App
-
-
-
-### Advanced Configuration
-
-
-
-### Deployment
-
-
-
-### `npm run build` fails to minify
-
+## Tutorial
+### `git clone + https_path_to_proyect`
+In the proyect directory, you can run: 
+### `npm install` 
+### `npm start`
