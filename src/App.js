@@ -13,9 +13,9 @@ function App() {
       <NavBar />
       <Challenge />
       <Routes>
-      <Route path="/" element={<ItemListContainer greeting="¡Bienvenidos a la Tienda!"/>}/>
-      <Route path="/categories/:categoryId" element={<ItemListContainer greeting="¡Bienvenidos a la Tienda!"/>}/>
-      <Route path="/detalle" element={<ItemDetailContainer/>}/>
+      <Route path="/" element={<ItemListContainer greeting="¡Bienvenides a la tienda!"/>}/>
+      <Route path="/categories/:categoryId" element={<ItemListContainer greeting="Categoria"/>}/>
+      <Route path="/detalle/:id" element={<ItemDetailContainer greeting="Detalle del producto"/>}/>
       <Route path="/cart" element={<CartItemDetail/>}/>
       </Routes>
       </BrowserRouter>
