@@ -8,10 +8,15 @@ The application has a dynamic NavBar component where the categories to be select
 ## This store is made with react CRA, Node and TailwindCSS, with a mock api for products. 
 
 ###App preview.
-<https://i.imgur.com/Ngrj1fn.mp4>
+<blockquote class="imgur-embed-pub" lang="en" data-id="a/Ngrj1fn"  ><a href="//imgur.com/a/Ngrj1fn">CODERHOUSE REACTJS CRA E-COMMERCE</a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+
 
 ## Tutorial
 ### `git clone + https_path_to_proyect`
 In the proyect directory, you can run: 
 ### `npm install` 
 ### `npm start`
+
+------------
+
+
