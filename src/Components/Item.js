@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import StartsWidget from '../extras/StartsWidget'
 
 const Item = ({ product }) => {
+    
 return (
         <div className='grid'>
             <div class="grid max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
@@ -14,9 +15,7 @@ return (
                     </div>
                     <div class="justify-start items-center">
                         <span class="text-3xl font-bold text-gray-900 dark:text-white">{product.price}</span>
-                        
-                    </div>
-                    
+                    </div>          
                     <div class="justify-start items-center pt-4">
                     <Link to={`/detalle/${product.id}`}
                         class="text-black bg-yellow-500 hover:bg-blue-800 focus:ring-4 focus:outline-none 
@@ -24,10 +23,6 @@ return (
                             dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
                         Ver Detalle</Link>
                     </div>
-                    
-                   
-                  
-
                 </div>
             </div>
         </div>

@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import CartWidget from '../extras/CartWidget';
-import fakeapi from '../mocks/fakeapi';
 
 const navbarMenu = [
   {
@@ -18,7 +17,6 @@ const navbarMenu = [
     label: "mobile",
     path: "/categories/mobile"
   },
-
 ]
 
 function NavBar() {
