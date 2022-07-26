@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { getProducts } from "../mocks/fakeapi";
 import LoadingSpinner from "../extras/LoadingSpinner";
 import { useParams } from "react-router-dom";
 import { db } from "../firebase/firebase";
@@ -10,11 +9,8 @@ const ItemListContainer = ({ greeting }) => {
   const [productList, setProductList] = useState([]);
   const [loading, setLoading] = useState(true);
   const { categoryId } = useParams();
-  console.log(productList);
-  console.log(db);
 
   useEffect(() => {
-
     const q = categoryId
       ? query(
           collection(db, "products-collection"),
@@ -23,8 +19,8 @@ const ItemListContainer = ({ greeting }) => {
       : collection(db, "products-collection");
 
     getDocs(q)
-      .then(result => {
-        const lista = result.docs.map(product => {
+      .then((result) => {
+        const lista = result.docs.map((product) => {
           return {
             id: product.id,
             ...product.data(),
@@ -33,7 +29,7 @@ const ItemListContainer = ({ greeting }) => {
         setProductList(lista);
       })
       .catch((error) => console.log(error))
-      .finally(() => setLoading(false))
+      .finally(() => setLoading(false));
   }, [categoryId]);
 
   return (
