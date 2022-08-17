@@ -8,7 +8,9 @@ import ItemDetailContainer from "./Components/ItemDetailContainer";
 import CartItemDetail from "./Components/CartItemDetail";
 import CartCustomProvider from "./Context/CartContext";
 import CartDetail from "./Components/CartDetail";
-
+import Checkout from "./Components/Checkout";
+import CheckoutContainer from "./Components/CheckoutContainer";
+import Thanks from "./Components/Thanks";
 function App() {
   return (
     <BrowserRouter>
@@ -31,6 +33,16 @@ function App() {
           <Route
             path="/cart"
             element={<CartDetail greeting="¡Tu carrito esta vacio!" />}
+          />
+          <Route
+            path="/checkout"
+            element={
+              <CheckoutContainer greeting="¡Estas a un paso de finalizar tu compra!" />
+            }
+          />
+          <Route
+            path="/fin"
+            element={<Thanks greeting="¡Gracias por su compra!" />}
           />
         </Routes>
       </CartCustomProvider>

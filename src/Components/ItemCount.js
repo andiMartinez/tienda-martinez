@@ -6,20 +6,20 @@ const ItemCount = ({ initial, onAdd, stock }) => {
   const handlerClickAdd = () => {
     if (count < stock) {
       setCount(count + 1);
-      console.log("aprete+1");
+      console.log("ADD PRODUCTO");
     }
   };
 
   const handlerClickSubtrack = () => {
     if (count > 1) {
       setCount(count - 1);
-      console.log("aprete-1");
+      console.log("REMOVE PRODUCT");
     }
   };
 
   const handlerClickAddToCart = () => {
     onAdd(count);
-    console.log("ad");
+    console.log("ADD PRODUCTOS TO CARRITO");
   };
 
   return (
