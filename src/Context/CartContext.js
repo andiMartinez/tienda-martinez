@@ -13,7 +13,8 @@ const CartCustomProvider = ({ children }) => {
 
   const addProducts = (product) => {
     if (isInCart(product.id)) {
-      const found = products.find((p) => p.id === product);
+      console.log(product.id);
+      const found = products.find((p) => p.id === product.id);
       const index = products.indexOf(found);
       const aux = [...products];
       aux[index].qty += product.qty;
@@ -30,8 +31,6 @@ const CartCustomProvider = ({ children }) => {
   };
 
   const isInCart = (id) => {
-    //const found = products.find(product => product.id === id);
-    //return found ? true: false;
     return products.some((products) => products.id === id);
   };
 

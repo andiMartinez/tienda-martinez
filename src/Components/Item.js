@@ -8,8 +8,8 @@ const Item = ({ product }) => {
       <div className="grid max-w-sm bg-white rounded-lg shadow-md dark:bg-gray-800 dark:border-gray-700">
         <img
           className="grid p-3 rounded-t-lg w-90"
-          src={product.images[0].src}
-          alt={product.images[0].alt}
+          src={product.image}
+          //alt={product.images[0].alt}
         />
         <div className="grid px-5 pb-5 text-center items-center">
           <h5 className="grid text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
