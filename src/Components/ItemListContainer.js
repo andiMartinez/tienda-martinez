@@ -17,6 +17,7 @@ const ItemListContainer = ({ greeting }) => {
             .catch((error) => console.log(error))
             .finally(() => setLoading(false))
     }, [categoryId])
+
     return (
         <div>
             <div className='landing text-center p-2 text-black bg-yellow-500'>
@@ -28,5 +29,4 @@ const ItemListContainer = ({ greeting }) => {
         </div>
     );
 }
-
 export default ItemListContainer;

@@ -2,8 +2,8 @@ import { useState, useContext } from 'react'
 import { RadioGroup } from '@headlessui/react'
 import React from 'react';
 import ItemCount from './ItemCount';
-import { cartContext } from '../Context/CartContext'
 import { Link } from 'react-router-dom';
+import { cartContext } from '../Context/CartContext';
 
 
 function classNames(...classes) {
@@ -12,14 +12,15 @@ function classNames(...classes) {
 
 const ItemDetail = ({ product, greeting }) => {
 
-  const [amount, setAmount] = useState(0);
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
   const [selectedSize, setSelectedSize] = useState(product.sizes[2])
   const [buyFinalized, setBuyFinalized] = useState(false)
+  const { addProducts } = useContext(cartContext);
 
   const onAdd = (count) => {
     setBuyFinalized(true);
-    const product = { ...product, qty: count }
+    addProducts({ ...product, qty: count });
+    
   }
 
   return (
