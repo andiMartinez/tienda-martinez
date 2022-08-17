@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ItemList from './ItemList'
-import { getData } from '../mocks/fakeapi'
+import { getProducts } from '../mocks/fakeapi'
+import LoadingSpinner from '../extras/LoadingSpinner'
 
 const ItemListContainer = ({ greeting }) => {
 
@@ -10,7 +11,7 @@ const ItemListContainer = ({ greeting }) => {
     console.log(productList);
 
     useEffect(() => {
-        getData
+        getProducts
             .then((respuestaPromise) => setProductList(respuestaPromise))
             .catch((error) => console.log(error))
             .finally(() => setLoading(false))
@@ -20,9 +21,9 @@ const ItemListContainer = ({ greeting }) => {
         <div>
             <div className='landing text-center p-2'>
                 <span>{greeting}</span>
-            </div> 
+            </div>
             <div>
-                {loading ? <p className='text-center m-52'>Cargando...</p> : <ItemList productList={productList} />}
+                {loading ? <p className='text-center m-52'><LoadingSpinner/></p> : <ItemList productList={productList} />}
             </div>
         </div>
     );

@@ -1,18 +1,17 @@
-import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
+import CartWidget from '../extras/CartWidget';
 
 function NavBar() {
   return (
     <nav className="nav">
       <div id="navbar">
-        <a id="logo">andinov_</a>
-        <ul id="navbar" >
-          <li><a href="/" className='nav' aria-current="page">Home</a></li>
-          <li><a href="/" className='nav'>LandingWEB</a></li>
-          <li><a href="/" className='nav'>Objetos3D</a></li>
-          <li><a href="/" className='nav'>MobileAPP</a></li>
-         <li><a href="/"  className='nav'>
-            <CartWidget />
-          </a>
+      <Link to="/" className='nav text-gray-100 text-2xl' aria-current="page">andinov_</Link>
+        <ul id="navbar">
+          <li><Link to="/" className='nav' aria-current="page">Home</Link></li>
+          <li><Link to="/categories/LandingWEB" className='nav'>WEB</Link></li>
+          <li><Link to="/categories/Objetos3D"className='nav'>3D</Link></li>
+          <li><Link to="/categories/MobileAPP" className='nav'>Mobile</Link></li>
+          <li><Link to="/cart" className='nav'><CartWidget/></Link>
           </li>
         </ul>
       </div>
