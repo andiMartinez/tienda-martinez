@@ -22,7 +22,7 @@ const ItemDetailContainer = ({ greeting }) => {
   return (
 
     <div>
-      {loading ? <p className='text-center m-52'><LoadingSpinner /></p> : <ItemDetail product={product} greeting={greeting}/>}
+      {loading ? <p className='text-center m-52'><LoadingSpinner/></p> : <ItemDetail product={product} greeting={greeting}/>}
     </div>
   );
 }

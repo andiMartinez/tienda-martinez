@@ -2,7 +2,7 @@ function Challenge() {
     return (
         <div>
             <ul id="challenge">
-                <li>Challenge: Ver detalle de producto</li>
+                <li>Challenge: Sincronizar Counter</li>
             </ul>
         </div>
     );

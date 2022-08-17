@@ -21,7 +21,7 @@ export const products = [
         ],
         images: [
             {
-                src: 'https://img.freepik.com/vector-gratis/conjunto-plantillas-diseno-pagina-destino-sitio-web-moderno-telefono-movil-o-tableta-articulos-galeria-formulario-contacto-ilustracion-aislada-plana_1284-60948.jpg?t=st=1657234249~exp=1657234849~hmac=337520b4ce336c4e24bb5efd00f7bfe4632c8454a84782f0630c49780a818394&w=826',
+                src: 'https://img.freepik.com/psd-gratis/smartphone-3d-mensajeria-texto_23-2148938938.jpg?w=740',
                 alt: 'Two each of gray, white, and black shirts laying flat.',
             },
             {
@@ -76,7 +76,7 @@ export const products = [
         ],
         images: [
             {
-                src: 'https://img.freepik.com/premium-vector/virtual-reality-social-media-post_148840-611.jpg?w=826',
+                src: 'https://img.freepik.com/psd-gratis/portatil-3d-grafico_23-2148938936.jpg?w=740',
                 alt: 'Two each of gray, white, and black shirts laying flat.',
             },
             {

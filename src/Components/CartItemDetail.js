@@ -62,7 +62,7 @@ const CartItemDetail = ({product}) => {
                   <div className="flex h-full flex-col overflow-y-scroll bg-white shadow-xl">
                     <div className="flex-1 overflow-y-auto py-6 px-4 sm:px-6">
                       <div className="flex items-start justify-between">
-                        <Dialog.Title className="text-lg font-medium text-gray-900"> Shopping cart </Dialog.Title>
+                        <Dialog.Title className="text-lg font-medium text-gray-900"> Tu carrito de compras </Dialog.Title>
                         <div className="ml-3 flex h-7 items-center">
                         <Link to="/">
                           <button
@@ -70,7 +70,7 @@ const CartItemDetail = ({product}) => {
                             className="-m-2 p-2 text-gray-400 hover:text-gray-500"
                             onClick={() => setOpen(false)}
                           >
-                            <span className="sr-only">Close panel</span>
+                            <span className="sr-only">Cerrar Panel</span>
                             <XIcon className="h-6 w-6" aria-hidden="true" />
                           </button>
                           </Link>
@@ -101,14 +101,14 @@ const CartItemDetail = ({product}) => {
                                     <p className="mt-1 text-sm text-gray-500">{product.color}</p>
                                   </div>
                                   <div className="flex flex-1 items-end justify-between text-sm">
-                                    <p className="text-gray-500">Qty {product.quantity}</p>
+                                    <p className="text-gray-500">Cantidad: {product.quantity}</p>
 
                                     <div className="flex">
                                       <button
                                         type="button"
-                                        className="font-medium text-indigo-600 hover:text-indigo-500"
+                                        className="font-medium text-yellow-600 hover:text-indigo-500"
                                       >
-                                        Remove
+                                        Eliminar
                                       </button>
                                     </div>
                                   </div>
@@ -122,30 +122,31 @@ const CartItemDetail = ({product}) => {
 
                     <div className="border-t border-gray-200 py-6 px-4 sm:px-6">
                       <div className="flex justify-between text-base font-medium text-gray-900">
-                        <p>Subtotal</p>
+                        <p>Total: </p>
                         <p>$262.00</p>
                       </div>
-                      <p className="mt-0.5 text-sm text-gray-500">Shipping and taxes calculated at checkout.</p>
+                      <p className="mt-0.5 text-sm text-gray-500">Envios e impuestos al checkout.</p>
+                       <Link to='/checkout'>      
                       <div className="mt-6">
                         <a
                           href="#"
-                          className="flex items-center justify-center rounded-md border border-transparent bg-indigo-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-indigo-700"
+                          className="flex items-center justify-center rounded-md border border-transparent bg-black px-6 py-3 text-base font-medium text-white shadow-sm hover:text-yellow-500"
                         >
-                          Checkout
+                          Continuar al pago
+                        </a>
+                      </div> 
+                      </Link> 
+                      <Link to='/'>
+                      <div className="mt-6">
+                        <a
+                          href="#" onClick={() => setOpen(false)} 
+                          className="flex items-center justify-center rounded-md border border-transparent bg-yellow-500 px-6 py-3 text-base font-medium text-black shadow-sm hover:bg-yellow-600"
+                        >
+                          ¡Quiero seguir comprando!
                         </a>
                       </div>
-                      <div className="mt-6 flex justify-center text-center text-sm text-gray-500">
-                        <p>
-                          or{' '}
-                          <button
-                            type="button"
-                            className="font-medium text-indigo-600 hover:text-indigo-500"
-                            onClick={() => setOpen(false)}
-                          >
-                            Continue Shopping<span aria-hidden="true"> &rarr;</span>
-                          </button>
-                        </p>
-                      </div>
+                      </Link>            
+                  
                     </div>
                   </div>
                 </Dialog.Panel>
