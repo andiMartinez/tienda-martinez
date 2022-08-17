@@ -6,7 +6,7 @@ const ItemList = ({productList}) => {
     <div >
         <div className='m-7 p-20 text-xl'>
         <h3>Productos en la tienda</h3>
-        <div className='m-7 flex justify-between flex-wrap'>
+        <div className='m-7 flex justify-start'>
         {productList.map((product)=> <Item product={product}/>)}
         </div>
         </div>

@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import { RadioGroup } from '@headlessui/react'
+import React from 'react';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
-const ItemDetail = ({ product }) => {
+const ItemDetail = ({ product, greeting }) => {
 
   const [amount, setAmount] = useState(0);
   const [selectedColor, setSelectedColor] = useState(product.colors[0])
@@ -18,7 +19,11 @@ const ItemDetail = ({ product }) => {
     }
   }
 
+  console.log('holi');
+
   return (
+    <div className='landing text-center p-2 text-black bg-yellow-500'>
+      {greeting}
     <div className="bg-white">
       <div className="pt-6">
         <nav aria-label="Breadcrumb">
@@ -45,7 +50,7 @@ const ItemDetail = ({ product }) => {
             ))}
             <li className="text-sm">
               <a href={product.href} aria-current="page" className="font-medium text-gray-500 hover:text-gray-600">
-                {product.name}
+                {product.name} 
               </a>
             </li>
           </ol>
@@ -216,14 +221,40 @@ const ItemDetail = ({ product }) => {
                   </div>
                 </RadioGroup>
               </div>
+              
+            </form>
+            <div class="grid grid-cols-3 gap-4 text-center justify-items-center content-evenly ">
+              <div className="grow">
               <button
+                  type="submit"
+                  onClick={() => count(-1) & console.log("aprete-1")}
+                  className="mt-5  bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  -
+                </button>
+              </div>
+              <div className='mt-5 text-base text-center '>
+                
+               Stock: {product.stock}
+                             
+              </div>
+              <div>
+              <button
+                  type="submit"
+                  onClick={() => count(+1) & console.log("aprete-1")}
+                  className="mt-5 w-1 bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                >
+                  +
+                </button>
+              </div>
+            </div>
+            <button
                 type="submit"
                 className="mt-10 w-full bg-indigo-600 border border-transparent rounded-md py-3 px-8 flex items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
               >
-                Add to bag
+                Agregar al carrito: {amount} 
               </button>
-            </form>
-            <section className='prd-crd text-center'>
+          {/*   <section className='prd-crd text-center'>
               <div className="justify-items-center">
                 <button
                   type="submit"
@@ -242,7 +273,7 @@ const ItemDetail = ({ product }) => {
                   +
                 </button>
               </div>
-            </section>
+            </section> */}
           </div>
           <div className="py-10 lg:pt-6 lg:pb-16 lg:col-start-1 lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             {/* Description and details */}
@@ -255,11 +286,10 @@ const ItemDetail = ({ product }) => {
             </div>
             <div className="mt-10">
               <h3 className="text-sm font-medium text-gray-900">Detalles:</h3>
-
               <div className="mt-4">
                 <ul role="list" className="pl-4 list-disc text-sm space-y-2">
                   {product.highlights.map((highlight) => (
-                    <li key={highlight} className="text-gray-400">
+                    <li key={highlight} className="text-gray-400 ">
                       <span className="text-gray-600">{highlight}</span>
                     </li>
                   ))}
@@ -275,6 +305,7 @@ const ItemDetail = ({ product }) => {
           </div>
         </div>
       </div>
+    </div>
     </div>
   )
 }
